@@ -1,0 +1,28 @@
+---
+import heroPage from "@assets/images/heroPage.png";
+import { Image } from "astro:assets";
+
+const { title } = Astro.props;
+
+---
+
+<section
+  id="heroPage"
+  class="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden"
+>
+  <!-- Background Image (behind content) -->
+  <Image
+    src={heroPage}
+    alt="Car detailing background"
+    class="absolute inset-0 w-full h-full object-cover z-0"
+    loading="lazy"
+  />
+
+  <!-- Overlay (optional dark filter for readability) -->
+  <div class="absolute inset-0 bg-black/50 z-10"></div>
+
+  <!-- Centered Content -->
+  <div class="relative z-20 text-center text-white px-4">
+    <h1 class="text-4xl md:text-6xl font-heading-1 uppercase">{title}</h1>
+  </div>
+</section>

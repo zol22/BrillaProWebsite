@@ -1,0 +1,48 @@
+---
+/**
+ * * About section
+ */
+
+ import { Image } from "astro:assets";
+import Button from "@components/Button/Button.astro"
+
+import aldair2 from "@assets/images/aldair2.png";
+---
+
+	<div class="flex flex-col md:flex-row gap-5 items-center p-5">
+		<div class=" w-full md:w-1/2 flex justify-center relative  col">
+
+			  <!-- Gold Circle -->
+			  <div class="gold-circle  md:w-[420px] md:h-[420px] lg:w-[470px] lg:h-[470px] xl:w-[480px] xl:h-[480px] bg-primary-100 rounded-full z-0"></div>
+
+
+			<!-- Foreground Image -->
+			<div class="w-full max-w-xs md:max-w-sm overflow-hidden relative z-10 shadow-2xl">
+				<Image
+					src={aldair2}
+					alt="Owner of BrillaPro Solutions"
+					width={400}
+					densities={[1.5, 2]}
+					class=" h-auto  w-full  object-cover"
+				/>
+			</div>
+		</div>
+		<div class="w-full md:w-1/2">
+			<h2 class="col  pl-8   text-primary-500 text-pretty uppercase">About</h2>
+			<div class="col  p-8 md:mb-5 lg:text-lg shadow-2xl text-primary-200">
+				<p>
+					Hi! I’m Aldair, founder of BrillaPro Solutions. I was born and raised in Peru and moved to the U.S. at age 11, 
+					chasing a better future. Learning English and adapting to a new culture wasn’t easy, but hard work and 
+					determination taught me the value of growth and independence.		
+                
+                </p>
+
+                <p class="mt-2">Over the years, I developed a deep interest in the world of business and personal freedom. I realized that happiness isn’t a destination — it’s something we build, day by day, through meaningful work and service to others.</p>
+
+                <p class="mt-2"> That belief inspired me to create BrillaPro Solutions — a company built on integrity, hard work, and a passion for delivering excellent results. My specialty is car detailing, but I also offer a wide range of professional services, including trash bin sanitization, curbside cleaning, carpet and upholstery cleaning, and more.</p>
+                
+                <p class="mt-2">  My goal is simple: to make your space cleaner, your day better, and your experience exceptional.
+                </p>
+			</div>
+		</div>
+	</div>

@@ -24,7 +24,7 @@ const { startStyle = "default", rest } = Astro.props as Props;
 	transition:name={`nav`}
 	{...rest}
 >
-	<div class="mx-auto flex w-full" class:list={[{ "text-base-400": startStyle === "default" }]}>
+	<div class="mx-auto flex w-full" class:list={[{ "text-base-400": startStyle === "white" }]}>
 		<div class="site-container flex h-16 w-full items-center">
 			<header class="flex w-full items-center gap-2">
 				<!-- home button / image -->
@@ -48,7 +48,7 @@ const { startStyle = "default", rest } = Astro.props as Props;
 									),
 								)
 							}
-							<Button variant="primary" href="#contact" class="w-fit">Request Service</Button>
+							<Button variant="primary" href="/#contact" class="w-fit">Request Service</Button>
 						</ul>
 					</nav>
 

@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+// data
+import siteData from "@config/siteData.json";
+import Section from "@components/Section/section.astro";
+import HeroPage from "@components/HeroPage/HeroPage.astro";
+import ServicesFull from "@components/Services/ServicesFull.astro";
+---
+
+
+<BaseLayout title={siteData.title} description={siteData.description} navStartStyle="white">
+    <HeroPage title="services"/>
+
+    <ServicesFull />
+</BaseLayout>
