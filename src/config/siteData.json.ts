@@ -16,23 +16,23 @@ export interface SiteDataProps {
 
 // Update this file with your site specific information
 const siteData: SiteDataProps = {
-	name: "Soluna Sites",
+	name: "Site Name",
 	// Your website's title and description (meta fields)
-	title: "Soluna Sites – Custom Websites for Business Growth",
+	title: "Site title",
 	description:
-		"Soluna Sites builds fast, SEO-optimized websites for small businesses and creatives in Orlando. Clean, responsive, and tailored to your vision.",
+		"Site Description.",
 	useViewTransitions: true,
 	// Your information!
 	author: {
-		name: "Solange Ormeno",
-		email: "ssormeno@hotmail.com",
-		twitter: "solunasites",
+		name: "Author name",
+		email: "Author Email",
+		twitter: "Author Twitter",
 	},
 
 	// default image for meta tags if the page doesn't have an image already
 	defaultImage: {
-		src: "/images/logo.png", // Change this
-		alt: "Soluna Sites sun and moon logo",
+		src: "logo", // Change this
+		alt: "Alt Logo",
 	},
 };
 

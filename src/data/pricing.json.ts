@@ -1,6 +1,4 @@
 import image1 from "@assets/images/hero2.jpg";
-import image2 from "@assets/images/couple-6-crop.jpg";
-import image3 from "@assets/images/couple-1-square.jpg";
 
 export interface PackageItem {
 	name: string;
@@ -23,7 +21,7 @@ export interface AddonItem {
 // 🌞 MAIN PACKAGES
 export const packages: PackageItem[] = [
 	{
-		name: "LumpSum - (one time)",
+		name: "Name",
         featured: false,
 		price: 300,
 		features: [
@@ -43,40 +41,18 @@ export const packages: PackageItem[] = [
 // 🌙 ADD-ONS
 export const addons: AddonItem[] = [
 	{
-		name: "Domain Management",
+		name: "Name",
 		description: "Yearly management and renewal of your domain name.",
 		price: 20,
 		recurring: "yearly",
         required: true,
-		image: image3,
 	},
 	{
-		name: "Hosting Setup",
+		name: "Name",
 		description: "Includes website hosting configuration and support.",
 		price: 20,
         required: true,
 		recurring: "monthly",
-	},
-	{
-		name: "Unlimited Edits",
-		description: "Unlimited changes to text and images anytime you need.",
-		price: 99,
-        required: false,
-		recurring: "monthly",
-	},
-	{
-		name: "Custom Domain Email Setup",
-		description: "Set up a professional email (hello@yourbusiness.com). Client pays email provider fees.",
-		price: 25,
-        required: false,
-		recurring: "one-time",
-	},
-	{
-		name: "WhatsApp Integration",
-		description: "Add a chat widget so visitors can message you instantly.",
-		price: 50,
-        required: false,
-		recurring: "one-time",
-	},
-];
+	}
+]
 

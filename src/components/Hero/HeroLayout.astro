@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+
+import Button from "@components/Button/Button.astro";
+
+import hero from "@assets/images/hero.jpg"
+
+---
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:items-center">
+	<div class="flex items-center p-8">
+		<div class="prose max-w-none max-lg:order-1">
+			<h1 class="font-black animate-on-scroll" data-motion data-delay="0">Sabor Peruano Hecho en Casa</h1>
+
+			<p>
+				Peruvian Buffet & Snacks for Every Occasion — whether you're planning a family gathering, a 
+				birthday, or just craving homemade Peruvian flavors, Rosa’s kitchen brings tradition and 
+				heart to your table.
+			</p>
+
+			<span class="text-peru font-medium"> Only Pickup &amp;  Delivery </span>
+
+			<div class="mt-8 flex items-center gap-x-8">
+				<Button
+				variant="ghost"
+				arrow="right"
+				href="/#contact"
+				class="text-xl text-[#3b2f2f] md:text-2xl">
+					Button 
+				</Button>
+			  
+			</div>
+		</div>
+	
+	</div>
+	<div class="flex items-center justify-center p-8 ">	
+		
+		<div  class="hero-image">
+			<Image
+			class="mx-auto opacity translate-y-0"
+			src={hero}
+			height={600}
+			alt="Pan con chicharrón, a traditional Peruvian pork sandwich with sweet potato and salsa criolla, held on a colorful street in Lima, Peru"
+			loading={"eager"}
+			fetchpriority={"high"}
+			data-motion
+			data-delay="200"
+				/>
+		</div>
+
+	</div>
+</div>

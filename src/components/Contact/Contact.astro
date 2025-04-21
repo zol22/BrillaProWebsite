@@ -17,17 +17,12 @@ const { class: className } = Astro.props as Props;
 import hero from "@assets/images/hero.jpg";
 ---
 
-<section
-	id="contact"
-	class="scroll-animation my-10 mx-auto max-w-6xl scroll-mt-10 px-4 py-8 md:max-w-6xl md:py-12 bg-primary-100"
-	class:list={[className]}
->
-	<h2 class="col text-center h2 uppercase text-pretty mt-8 mb-6">Let’s Build Your Website!</h2>
+
+	<h2 class="col text-center h2 uppercase text-pretty mt-8 mb-6">Title</h2>
 	<div class="grid gap-y-10 md:grid-cols-2 grid-cols-1">
 		<div class="border-primary-300 pt-8 md:border-r md:pr-20 md:pl-12">
 			<p class="col description text-lg">
-				Tell me a bit about your business and what you’re looking for. 
-				I’ll respond within 24 hours to set up a quick intro call or message chat.
+				Description
 			</p>
 			<div class="col mx-auto mt-8  overflow-hidden">
 				<Image
@@ -43,4 +38,4 @@ import hero from "@assets/images/hero.jpg";
 			<ContactForm />
 		</div>
 	</div>
-</section>
+

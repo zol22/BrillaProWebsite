@@ -1,14 +1,12 @@
 ---
 /* I used Web3Form 
 */
-import { Icon } from "astro-icon/components";
 
 // components
 import FooterLink from "./FooterLink.astro";
-import SiteLogo from "@components/SiteLogo/SiteLogo.astro";
 
 // data
-import siteData from "@config/siteData.json";
+import footerData from "@config/footerData.json.ts"
 
 const today = new Date();
 ---
@@ -19,20 +17,18 @@ const today = new Date();
 		<div
 			class="flex flex-col md:flex-row w-full justify-center gap-2 text-lg items-center "
 		>
-
-				<FooterLink href="/">Home</FooterLink>
-				<FooterLink href="/#portfolio">Portfolio</FooterLink>
-			
-				<FooterLink href="/#pricing">Pricing</FooterLink>
-				<FooterLink href="/#contact">Contact</FooterLink>
-		
+			{
+				footerData.map((footer)=> (
+					<FooterLink href={footer.link}>{footer.text}</FooterLink>
+				))
+			}
+	
 		</div>
 
 		<!-- lets connect -->
 		<div class="description mx-auto mt-6 max-w-[40rem] px-4 text-center">
 			<p>
-			    Whether you need a website, want to collaborate, or just chat over a virtual coffee  ☕ —
-      			I’d love to hear from you.
+			   Text
 			</p>
 		</div>
 

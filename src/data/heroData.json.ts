@@ -6,10 +6,10 @@ export interface HeroDataProps {
 
 // Update this file with your site specific information
 const heroData: HeroDataProps = {
-	title: "Soluna Sites",
+	title: "Hero Tite",
 	description:
-		"We Make Websites That Reflects Your Brand & Grows Your Business",
-	CTA: "Let's build your website",
+		"Hero Description",
+	CTA: "CTA",
 };
 
 export default heroData;

@@ -1,0 +1,11 @@
+---
+const { id, class: className, contain = true } = Astro.props;
+
+---
+
+<section id={id} class={`scroll-animation  site-container scroll-mt-10 py-10 md:py-12 ${className} `}>
+    <div class={`${contain ? "container py-10 lg:py-32" : ""}`}>
+        <slot />
+    </div>
+
+</section>
