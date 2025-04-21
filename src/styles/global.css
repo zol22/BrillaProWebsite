@@ -36,28 +36,49 @@
 	button {
 		@apply cursor-pointer;
 	}
+	h1 {
+		@apply text-4xl lg:text-5xl;
+		font-family: var(--font-heading-1);
+	}
+	h2 {
+		@apply text-2xl leading-tight tracking-wide uppercase md:text-[2.5rem] md:leading-tight;
+		font-family: var(--font-heading-1);
+	}
+	h3 {
+		@apply text-lg leading-tight font-medium tracking-widest uppercase md:text-2xl md:leading-tight;
+		font-family: var(--font-heading-2);
+	}
 }
 
 @layer components {
-	.h1 {
-		@apply font-heading-1 text-4xl font-semibold lg:text-5xl;
+	
+	.gold-circle {
+		  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-100 rounded-full z-0;
+		  width: 300px;
+		  height: 300px;
+
+		  @media(min-width: 360px){
+			width: 320px;
+			height: 320px;
+		  }
+	  
+		  @media (min-width: 375px) {
+			width: 340px;
+			height: 340px;
+		  }
+	  
+		  @media (min-width: 412px) {
+			width: 360px;
+			height: 360px;
+		  }
 	}
 
-	.h2 {
-		@apply font-heading-1 text-2xl leading-tight tracking-wide uppercase md:text-[2.5rem] md:leading-tight;
-	}
-
-	.h3 {
-		@apply font-heading-2 text-lg leading-tight font-medium tracking-widest uppercase md:text-2xl md:leading-tight;
-	}
+	  
 
 	.description {
 		@apply text-base-700;
 	}
 
-	.site-container {
-		@apply mx-auto max-w-[74rem] px-4;
-	}
 
 	/* used for various form inputs */
 	.form__label {
@@ -65,13 +86,14 @@
 	}
 
 	.form__input {
-		@apply border-primary-300 text-base-900 placeholder-base-500 w-full rounded-none border bg-transparent px-4 py-2 transition duration-200 outline-none;
+		@apply border-primary-100  w-full rounded-none border bg-transparent px-4 py-2 transition duration-200 outline-none;
 		@apply focus:border-primary-400 focus-visible:border-primary-400 focus:ring-0 focus:outline-none focus-visible:outline-none;
 	}
 
 	/* styles navbar links */
 	.nav__link--base {
-		@apply font-heading-1 px-4 py-2 tracking-wide uppercase transition duration-200 hover:opacity-80;
+		@apply px-4 py-2 tracking-wide uppercase transition duration-200 hover:opacity-80;
+		font-family: var(--font-heading-1);
 	}
 }
 
@@ -86,7 +108,6 @@
 	}
 }
 
-/* You can include this in your global CSS if needed */
 .scroll-animation .col {
 	@apply translate-y-4 opacity-0 transition-all duration-1000;
   }
@@ -100,3 +121,12 @@
 .scroll-animation .col:nth-child(3) { @apply delay-300; }
 
   
+.bg-hero-gradient {
+	background: linear-gradient(to right, #F3F3F3 21%, #BABABA 100%);
+
+}
+
+.bg-gradient-dark {
+	background: linear-gradient(to right, #111111 31%, #666666 100%);
+
+}

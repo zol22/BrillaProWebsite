@@ -6,10 +6,10 @@ export interface HeroDataProps {
 
 // Update this file with your site specific information
 const heroData: HeroDataProps = {
-	title: "Hero Tite",
+	title: "Powerful. Precise. Professional.",
 	description:
-		"Hero Description",
-	CTA: "CTA",
+		"Professional Auto Mobile Cleaning & Pressure Washing  in Orlando",
+	CTA: "Get A Free Quote",
 };
 
 export default heroData;

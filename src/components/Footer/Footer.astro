@@ -7,11 +7,13 @@ import FooterLink from "./FooterLink.astro";
 
 // data
 import footerData from "@config/footerData.json.ts"
+import { Icon } from "astro-icon/components";
+
 
 const today = new Date();
 ---
 
-<footer class="bg-base-100/40 mt-12 flex flex-col items-center justify-center py-8">
+<footer class="bg-base-100/40  flex flex-col items-center justify-center py-8">
 	<div class="site-container">
 		<!-- footer links -->
 		<div
@@ -26,15 +28,15 @@ const today = new Date();
 		</div>
 
 		<!-- lets connect -->
-		<div class="description mx-auto mt-6 max-w-[40rem] px-4 text-center">
+		<div class="mx-auto mt-6 max-w-[40rem] px-4 text-center opacity-80">
 			<p>
-			   Text
+			   Let's Connect
 			</p>
 		</div>
 
 		<!-- socials -->
-		 {/* 
-		<div class="text-primary-500 mt-8 flex justify-center gap-4">
+		
+		<div class="text-primary-500 mt-3 flex justify-center gap-4">
 			<a href="https://x.com/BowTiedWebReapr" target="_blank" rel="noopener noreferrer">
 				<Icon name="socials/mdi-facebook" class="size-6 transition hover:opacity-80" />
 				<span class="sr-only">Facebook</span>
@@ -44,24 +46,16 @@ const today = new Date();
 				<span class="sr-only">Twitter</span>
 			</a>
 			<a href="https://x.com/BowTiedWebReapr" target="_blank" rel="noopener noreferrer">
-				<Icon name="socials/mdi-youtube" class="size-6 transition hover:opacity-80" />
-				<span class="sr-only">Youtube</span>
-			</a>
-			<a href="https://x.com/BowTiedWebReapr" target="_blank" rel="noopener noreferrer">
 				<Icon name="socials/basil-instagram-solid" class="size-6 transition hover:opacity-80" />
 				<span class="sr-only">Instagram</span>
 			</a>
-		</div>*/}
+		</div>
 
 		<!-- copyright -->
-		<div class="mt-4 mb-2 text-center text-sm opacity-80">
-			&copy; {today.getFullYear()} made by <a
-				href="https://solangeormeno.dev/"
-				class="hover:text-primary-600 transition"
-				target="_blank"
-				rel="noopener">Solange</a
-			>
+		<p class="mt-4 mb-2 text-center text-sm opacity-80">
+			© {new Date().getFullYear()} BrillaPro Solutions. All rights reserved. Proudly serving Orlando and surrounding areas.
+
 			<!-- {siteData.name}. All rights reserved. -->
-		</div>
+		</p>
 	</div>
 </footer>

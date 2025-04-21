@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import aldair3 from "@assets/images/aldair3.png";
+import Button from "@components/Button/Button.astro";
+---
+
+<h1 class="text-center text-primary-100 col">Why Choose Brilla Pro Solutions?</h1>
+<div class="flex flex-col md:flex-row gap-5 items-center justify-center text-primary-200">
+    <div class="w-full md:w-1/2 flex flex-col  col p-8">
+        <p class="mb-5">At BrillaPro Solutions, we don’t just clean — we care. Whether it’s your car, carpet, or curbside, we treat every job like it’s our own. We show up on time, work with pride, and leave your space shining.
+        </p>
+        <h3 class="my-4">What Makes Us Different?</h3>
+        <ul>
+            <li>Locally Owned, Personally Invested </li>
+            <li>Premium Quality, Fair Pricing</li>
+            <li>Respectful & Reliable </li>
+            <li>Passion for Detail</li>
+            <li>Full-Service Options  </li>
+
+        </ul>
+        <Button href="#contact" variant="secondary" class="w-fit mt-5"> Get a Free Quote</Button>
+
+    </div>
+    <div class="w-full md:w-1/2 p-8">
+        <div class="w-full  md:max-w-sm">
+            <Image
+            src={aldair3}
+            alt="Owner of BrillaPro Solutions"
+            width={250}
+            densities={[1.5, 2]}
+            class=" h-auto  w-full  max-h-[400px] object-cover col"
+            loading="lazy"
+        />
+        </div>
+    </div>
+
+</div>

@@ -18,20 +18,17 @@ const navConfig: navItem[] = [
 		link: "/",
 	},	{
 		text: "About",
-		link: "/#about",
+		link: "/about",
 	},
 	{
-		text: "My Work",
-		link: "/portfolio",
+		text: "Services",
+		link: "/services",
 	},
 	{
-		text: "Pricing",
-		link: "/#pricing",
+		text: "Gallery",
+		link: "/gallery",
 	},
-	{
-		text: "Contact",
-		link: "/#contact",
-	},
+
 ];
 
 export default navConfig;

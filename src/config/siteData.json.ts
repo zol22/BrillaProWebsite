@@ -16,7 +16,7 @@ export interface SiteDataProps {
 
 // Update this file with your site specific information
 const siteData: SiteDataProps = {
-	name: "Site Name",
+	name: "Brilla Pro Solutions",
 	// Your website's title and description (meta fields)
 	title: "Site title",
 	description:

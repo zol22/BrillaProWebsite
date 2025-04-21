@@ -1,36 +1,58 @@
 ---
 import { Image } from "astro:assets";
-
+import aldair from "@assets/images/aldair.png"
 // layout
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 // components
 import Hero from "@components/Hero/Hero.astro";
-import HeroLayout from "@components/Hero/HeroLayout.astro"
 import Contact from "@components/Contact/Contact.astro";
+import About from "@components/About/About.astro"
 
 // data
 import siteData from "@config/siteData.json";
 import Section from "@components/Section/section.astro";
+import Steps from "@components/Steps/Steps.astro";
+import Whyme from "@components/WhyMe/Whyme.astro";
+import ServicesCard from "@components/Services/ServicesCard.astro";
 ---
 
 <BaseLayout title={siteData.title} description={siteData.description} navStartStyle="white">
 	<Hero />
 
-	<Section class="bg-blue-100">
-		<HeroLayout />
+	{/* Steps */}
+	<Section id="steps" class="bg-primary-300 text-primary-100">
+		<Steps />
 	</Section>
 
-	<Section class="bg-pink-100">
-		<p class="col">This is About</p>
+	{/* Image */}
+	<section class="w-full">	
+		<Image src={aldair} alt="BrillaPro Solutions founder detailing a car"
+		width={1280}
+		height={533}
+		class="w-full h-auto object-cover"  
+		format="webp"
+		loading="lazy"
+		quality={70}
+		/>
+	</section>
+
+	{/* About Me*/ }
+	<Section id="about" class="bg-primary-300">
+		<About />
 	</Section>
 
-
-	<Section class="bg-cyan-100">
-		<p class="col">This is Testimonials</p>
+	{/* Why Me */}
+	<Section class="bg-gradient-dark">
+		<Whyme />
 	</Section>
 
-	<Section class="bg-amber-100">
+	{/* My services */}
+	<Section class="bg-white">
+		<ServicesCard />
+	</Section>
+	
+	<Section id="contact" class="bg-primary-300 ">
 		<Contact />
 	</Section>
 

@@ -14,25 +14,29 @@ interface Props {
 
 const { class: className } = Astro.props as Props;
 
-import hero from "@assets/images/hero.jpg";
 ---
 
 
-	<h2 class="col text-center h2 uppercase text-pretty mt-8 mb-6">Title</h2>
-	<div class="grid gap-y-10 md:grid-cols-2 grid-cols-1">
-		<div class="border-primary-300 pt-8 md:border-r md:pr-20 md:pl-12">
-			<p class="col description text-lg">
-				Description
+	<h2 class="text-center text-primary-100 col mb-8">Contact Us</h2>
+	<div class="grid gap-y-10 md:grid-cols-2 grid-cols-1 text-primary-200 ">
+		<div class=" pt-8 md:border-r md:pr-20 md:pl-12">
+			<p class="col  text-lg">
+				Have questions? Need a quote? We’re here to help.  
+				Whether you’re ready to schedule a service or just want more info, 
+				feel free to reach out — we’ll respond promptly!
 			</p>
-			<div class="col mx-auto mt-8  overflow-hidden">
-				<Image
-					src={hero}
-					alt="Minimalist home office setup with a white desk, MacBook, vintage camera, clear acrylic chair, potted snake plant, and wooden ladder against a white wall"
-					width={450}
-					densities={[1.5, 2]}
-					class="h-full w-full object-cover"
-				/>
+			<div>
+				<ul>
+					<li>Location</li>
+					<li>Location</li>
+
+					<li>Location</li>
+
+					<li>Location</li>
+
+				</ul>
 			</div>
+
 		</div>
 		<div class="md:pr-12 md:pl-20">
 			<ContactForm />
