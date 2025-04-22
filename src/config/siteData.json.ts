@@ -18,21 +18,21 @@ export interface SiteDataProps {
 const siteData: SiteDataProps = {
 	name: "Brilla Pro Solutions",
 	// Your website's title and description (meta fields)
-	title: "Site title",
+	title: "Brilla Pro Solutions | Mobile Car Detailing & Pressure Washing in Orlando, FL",
 	description:
-		"Site Description.",
+		"Brilla Pro Solutions offers expert mobile car detailing, pressure washing, curbside cleanup, and carpet & upholstery cleaning in Orlando and surrounding areas. We bring professional results to your driveway with flexible scheduling and honest service.",
 	useViewTransitions: true,
 	// Your information!
 	author: {
-		name: "Author name",
-		email: "Author Email",
-		twitter: "Author Twitter",
+		name: "Aldair Ormeno",
+		email: "info@brillapro.com",
+		twitter: "brillaprosolutions",
 	},
 
 	// default image for meta tags if the page doesn't have an image already
 	defaultImage: {
 		src: "logo", // Change this
-		alt: "Alt Logo",
+		alt: "Brilla Pro Solutions Logo",
 	},
 };
 

@@ -5,7 +5,7 @@ import heroData from "../../data/heroData.json.ts";
 import Button from "@components/Button/Button.astro";
 
 
-const { title, description, CTA } = heroData;
+const {title, description, CTA } = Astro.props;
 
 
 ---
@@ -29,7 +29,7 @@ const { title, description, CTA } = heroData;
   <div class="relative z-20 text-center px-4 text-primary-200">
     <h1 class="text-4xl md:text-6xl font-heading-1 uppercase col ">{title}</h1>
     <p class="text-xl mt-5 col ">{description}</p>
-    <div class="col px-4 mt-16 col ">
+    { CTA ?  <div class="col px-4 mt-16 col ">
       <Button
         variant="outline"
         arrow="right"
@@ -38,6 +38,8 @@ const { title, description, CTA } = heroData;
       >
         {CTA}
       </Button>
-    </div>
+    </div> : null
+    }
+   
   </div>
 </section>

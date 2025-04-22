@@ -15,26 +15,33 @@ import Section from "@components/Section/section.astro";
 import Steps from "@components/Steps/Steps.astro";
 import Whyme from "@components/WhyMe/Whyme.astro";
 import ServicesCard from "@components/Services/ServicesCard.astro";
+
+import heroData from "../data/heroData.json.ts";
+const { title, description, CTA } = heroData;
 ---
 
 <BaseLayout title={siteData.title} description={siteData.description} navStartStyle="white">
-	<HeroPage />
+	<HeroPage title={title} description={description} CTA={CTA}/>
 
 	{/* Steps */}
-	<Section id="steps" class="bg-primary-300 text-primary-100">
+	<Section id="steps" class="bg-primary-300 text-primary-100 pb-0">
 		<Steps />
 	</Section>
 
 	{/* Image */}
-	<section class="w-full">	
-		<Image src={aldair} alt="BrillaPro Solutions founder detailing a car"
-		width={1280}
-		height={533}
-		class="w-full h-auto object-cover"  
-		format="webp"
-		loading="lazy"
-		quality={70}
+	<section class="relative w-full overflow-hidden parallax-wrapper mt-0 pt-0 h-[100vh];">	
+		<div class=" absolute top-0 left-0 w-full h-full will-change-transform z-0" id="parallax-img">
+			<Image src={aldair} alt="BrillaPro Solutions founder detailing a car"
+			width={1280}
+			height={533}
+			class="w-full h-full object-cover"  
+			format="webp"
+			loading="lazy"
+			quality={70}
 		/>
+		</div>
+
+		
 	</section>
 
 
@@ -58,3 +65,32 @@ import ServicesCard from "@components/Services/ServicesCard.astro";
 	</Section>
 
 </BaseLayout>
+
+
+
+<script is:inline>
+	const parallax = () => {
+	  const image = document.getElementById("parallax-img");
+  
+	  if (!image) return;
+  
+	  window.addEventListener("scroll", () => {
+		const scrolled = window.scrollY;
+		image.style.transform = `translateY(${scrolled * 0.2}px)`; // Adjust speed here
+	  });
+	};
+  
+	document.addEventListener("DOMContentLoaded", parallax);
+	document.addEventListener("astro:after-swap", parallax);
+  </script>
+  
+
+  <style>
+	.parallax-wrapper {
+		height: 100vh;
+		position: relative;
+		overflow: hidden;
+		background-color:var(--color-primary-300);
+		}
+
+  </style>
