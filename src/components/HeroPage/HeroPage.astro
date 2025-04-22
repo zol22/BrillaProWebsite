@@ -1,14 +1,18 @@
 ---
 import heroPage from "@assets/images/heroPage.png";
 import { Image } from "astro:assets";
+import heroData from "../../data/heroData.json.ts";
+import Button from "@components/Button/Button.astro";
 
-const { title } = Astro.props;
+
+const { title, description, CTA } = heroData;
+
 
 ---
 
 <section
   id="heroPage"
-  class="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden"
+  class="scroll-animation relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden"
 >
   <!-- Background Image (behind content) -->
   <Image
@@ -22,7 +26,18 @@ const { title } = Astro.props;
   <div class="absolute inset-0 bg-black/50 z-10"></div>
 
   <!-- Centered Content -->
-  <div class="relative z-20 text-center text-white px-4">
-    <h1 class="text-4xl md:text-6xl font-heading-1 uppercase">{title}</h1>
+  <div class="relative z-20 text-center px-4 text-primary-200">
+    <h1 class="text-4xl md:text-6xl font-heading-1 uppercase col ">{title}</h1>
+    <p class="text-xl mt-5 col ">{description}</p>
+    <div class="col px-4 mt-16 col ">
+      <Button
+        variant="outline"
+        arrow="right"
+        href="/#contact"
+        class="text-xl gap-2  md:text-2xl mx-auto w-fit"
+      >
+        {CTA}
+      </Button>
+    </div>
   </div>
 </section>

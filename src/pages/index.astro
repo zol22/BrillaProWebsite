@@ -5,7 +5,7 @@ import aldair from "@assets/images/aldair.png"
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 // components
-import Hero from "@components/Hero/Hero.astro";
+import HeroPage from "@components/HeroPage/HeroPage.astro";
 import Contact from "@components/Contact/Contact.astro";
 import About from "@components/About/About.astro"
 
@@ -18,7 +18,7 @@ import ServicesCard from "@components/Services/ServicesCard.astro";
 ---
 
 <BaseLayout title={siteData.title} description={siteData.description} navStartStyle="white">
-	<Hero />
+	<HeroPage />
 
 	{/* Steps */}
 	<Section id="steps" class="bg-primary-300 text-primary-100">
@@ -37,10 +37,6 @@ import ServicesCard from "@components/Services/ServicesCard.astro";
 		/>
 	</section>
 
-	{/* About Me*/ }
-	<Section id="about" class="bg-primary-300">
-		<About />
-	</Section>
 
 	{/* Why Me */}
 	<Section class="bg-gradient-dark">
@@ -50,6 +46,11 @@ import ServicesCard from "@components/Services/ServicesCard.astro";
 	{/* My services */}
 	<Section class="bg-white">
 		<ServicesCard />
+	</Section>
+
+	{/* About Me*/ }
+	<Section id="about" class="bg-primary-300">
+			<About />
 	</Section>
 	
 	<Section id="contact" class="bg-primary-300 ">
