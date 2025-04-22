@@ -10,8 +10,9 @@ import HeroPage from "@components/HeroPage/HeroPage.astro";
 
 
 <BaseLayout title={siteData.title} description={siteData.description} navStartStyle="white">
-    <HeroPage title="gallery" />
-    
-
-    <ServiceGallery />
+  
+    <Section id="gallery">
+          <ServiceGallery />
+    </Section>
+  
 </BaseLayout>
