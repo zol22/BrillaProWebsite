@@ -1,4 +1,4 @@
-import cd2 from "@assets/gallery/detailing/cd2.jpg"
+import cd1 from "@assets/gallery/detailing/cd1.jpg"
 import cd4 from "@assets/gallery/detailing/cd4.jpg"
 import cd6 from "@assets/gallery/detailing/cd6.jpg"
 
@@ -11,7 +11,7 @@ export const gallery = [
     {
       title: "Car Detailing",
       type: "image",
-      image: cd2,
+      image: cd1,
       alt: "Deep clean car exterior 1",
       slug:"deep-clean-car-exterior-1"
     },
