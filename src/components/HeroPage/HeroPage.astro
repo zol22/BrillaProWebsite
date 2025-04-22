@@ -30,14 +30,8 @@ const {title, description, CTA } = Astro.props;
     <h1 class="text-4xl md:text-6xl font-heading-1 uppercase col ">{title}</h1>
     <p class="text-xl mt-5 col ">{description}</p>
     { CTA ?  <div class="col px-4 mt-16 col ">
-      <Button
-        variant="outline"
-        arrow="right"
-        href="/#contact"
-        class="text-xl gap-2  md:text-2xl mx-auto w-fit"
-      >
-        {CTA}
-      </Button>
+              <Button href="#contact" variant="secondary" class="w-fit mx-auto "> {CTA}</Button>
+
     </div> : null
     }
    
