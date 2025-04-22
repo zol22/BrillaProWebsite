@@ -1,4 +1,3 @@
-// src/data/gallery.json.ts
 import cd2 from "@assets/gallery/detailing/cd2.jpg"
 import cd4 from "@assets/gallery/detailing/cd4.jpg"
 import cd6 from "@assets/gallery/detailing/cd6.jpg"
