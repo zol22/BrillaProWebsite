@@ -1,0 +1,65 @@
+---
+import { gallery } from "@/data/gallery.json";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Section from "@components/Section/section.astro"
+import Button from "@components/Button/Button.astro";
+import siteData from "@config/siteData.json";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths() {
+  return gallery.map((item) => ({
+    params: { slug: item.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const media = gallery.find((item) => item.slug === slug);
+---
+
+<BaseLayout title={siteData.title} description={siteData.description} navStartStyle="white">
+    <Section id="gallery-view" class="text-center mt-20">
+        { media ? (
+      <div id="gallery-media">
+        <h1 class="mt-15 mb-3 text-center text-primary-100">{media.title}</h1>
+        
+        <Button href="/gallery" class="w-fit" variant="ghost">
+          ← Back to Gallery
+        </Button>
+
+        {media.type === "image" ? (
+            <Image
+                src={media.image}
+                alt={media.alt}
+                widths={[320, 480, 640, 768, 1024]}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                format="webp"
+                quality={60}
+                loading="lazy"
+                class="w-full h-auto"
+            />
+            ) : media.type === "video" ? (
+            <div class="w-full max-w-4xl rounded-lg shadow-md bg-base-200 p-6 text-center text-base-800">
+                <p>🎬 Video coming soon!</p>
+            </div>
+            ) : null}
+
+        </div>
+    ) : (
+      <p class="text-center text-red-500">Media not found.</p>
+    )}
+    </Section>
+
+      <!-- Click Outside Script -->
+      <script>
+        document.addEventListener('click', (event) => {
+          const mediaContent = document.getElementById('gallery-media');
+          const target = event.target as Node;
+      
+          if (mediaContent && !mediaContent.contains(target)) {
+            window.location.href = "/gallery";
+          }
+        });
+      </script>
+      
+    
+</BaseLayout>

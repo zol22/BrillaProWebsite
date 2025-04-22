@@ -1,0 +1,42 @@
+---
+import { gallery } from "@/data/gallery.json";
+import { Image } from "astro:assets";
+---
+
+
+<div class="columns-1 sm:columns-2 lg:columns-3 gap-4 mt-20">
+    {gallery.map((item) => {
+      return (
+        /* @ts-expect-error Astro directive */
+        <a is:transition
+          href={`/gallery/${item.slug}`}
+          class="block mb-4 break-inside-avoid cursor-pointer"
+        >
+          {item.type === 'image' ? (
+            <Image
+              src={item.image}
+              alt={item.alt}
+              widths={[320, 480, 640, 768, 1024]}
+              sizes="(max-width: 768px) 100vw, 33vw"
+              format="webp"
+              quality={60}
+              loading="lazy"
+              class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            />
+          ) : (
+            <video
+              src={item.image}
+              poster={item.thumbnail}
+              muted
+              loop
+              playsinline
+              class="w-full h-auto rounded-lg shadow-md"
+            />
+          )}
+        </a>
+      );
+    })}
+
+
+  </div>
+  

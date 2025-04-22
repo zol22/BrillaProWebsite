@@ -1,4 +1,3 @@
-import image1 from "@assets/images/hero2.jpg";
 import carDetailing from "@assets/images/carDetailing.png"
 import pressurewashing from "@assets/images/pressurewashing.png"
 
