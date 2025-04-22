@@ -49,12 +49,16 @@ export default defineConfig({
 	],
 	vite: {
 		plugins: [tailwindcss()],
+		resolve: {
+			alias: {
+			  "@assets": new URL("./src/assets", import.meta.url).pathname,
+			  "@components": new URL("./src/components", import.meta.url).pathname,
+			  "@layouts": new URL("./src/layouts", import.meta.url).pathname,
+			  "@config": new URL("./src/config", import.meta.url).pathname,
+			}
+		  },
 		// stop inlining short scripts to fix issues with ClientRouter: https://github.com/withastro/astro/issues/12804
 		build: {
-			rollupOptions:{
-				external: ['virtual:astro:assets/fonts/internal']
-
-			},
 			assetsInlineLimit: 0,
 		},
 	},
