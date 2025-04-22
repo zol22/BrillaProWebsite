@@ -52,7 +52,7 @@ export const gallery = [
     {
       title: "Interior Detailing Video",
       type: "video",
-      image:"/src/assets/gallery/detailing/videos/video.MP4",      
+      image:"/src/assets/gallery/detailing/videos/video.mp4",      
       alt: "Black leather car interior fully detailed with clean backseats and front seats",
       thumbnail: "",   //"/src/assets/gallery/detailing/cd1.JPG",
       slug:"interior-detailing-final-result"
