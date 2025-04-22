@@ -14,7 +14,7 @@ import { Image } from "astro:assets";
         >
           {item.type === 'image' ? (
             <Image
-              src={item.image}
+              src={item.image as ImageMetadata}
               alt={item.alt}
               widths={[320, 480, 640, 768, 1024]}
               sizes="(max-width: 768px) 100vw, 33vw"
@@ -26,12 +26,15 @@ import { Image } from "astro:assets";
             />
           ) : (
             <video
-              src={item.image}
+              src={item.image as string}
               poster={item.thumbnail}
+              preload="metadata"
               muted
-              loop
+              controls
+              controlslist="nodownload nofullscreen"
               playsinline
-              class="w-full h-auto rounded-lg shadow-md"
+              class="w-full h-auto object-cover rounded-lg shadow-md  transition-transform duration-300 hover:scale-105 "
+              transition:name={`video_${item.slug}`}
             />
           )}
         </a>
