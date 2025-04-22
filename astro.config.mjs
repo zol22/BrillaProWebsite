@@ -51,6 +51,10 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 		// stop inlining short scripts to fix issues with ClientRouter: https://github.com/withastro/astro/issues/12804
 		build: {
+			rollupOptions:{
+				external: ['virtual:astro:assets/fonts/internal']
+
+			},
 			assetsInlineLimit: 0,
 		},
 	},
