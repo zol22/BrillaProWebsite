@@ -51,7 +51,7 @@ export const gallery = [
     {
       title: "Interior Detailing Video",
       type: "video",
-      image:"/src/assets/gallery/detailing/videos/video.mp4",      
+      image:"/videos/video.mp4",      
       alt: "Black leather car interior fully detailed with clean backseats and front seats",
       thumbnail: "",   //"/src/assets/gallery/detailing/cd1.JPG",
       slug:"interior-detailing-final-result"
@@ -60,7 +60,7 @@ export const gallery = [
     {
       title: "Exterior Detailing Video",
       type: "video",
-      image:"/src/assets/gallery/detailing/videos/video2.mov",      
+      image:"/videos/video2.mov",      
       alt: "Shiny white SUV after car detailing",
       thumbnail: "",   //"/src/assets/gallery/detailing/cd1.JPG",
       slug:"exterior-detailing-final-result"
@@ -69,7 +69,7 @@ export const gallery = [
     {
       title: "Rim Detailing Video",
       type: "video",
-      image:"/src/assets/gallery/detailing/videos/video3.mov",      
+      image:"/videos/video3.mov",      
       alt: "Shiney white Suv and close-up of a freshly cleaned rim ",
       thumbnail: "",   //"/src/assets/gallery/detailing/cd1.JPG",
       slug:"rim-detailing-final-result"
@@ -78,7 +78,7 @@ export const gallery = [
     {
       title: "Deep Interior Car Cleaning with Vacuum Video",
       type: "video",
-      image:"/src/assets/gallery/detailing/videos/video4.mov",      
+      image:"/videos/video4.mov",      
       alt: "Dirty car interior before detailing with vacuum machine removing debris and stains",
       thumbnail: "",   //"/src/assets/gallery/detailing/cd1.JPG",
       slug:"deep-interior-car-cleaning-vacuum"
