@@ -60,7 +60,10 @@ export default defineConfig({
 		// stop inlining short scripts to fix issues with ClientRouter: https://github.com/withastro/astro/issues/12804
 		build: {
 			assetsInlineLimit: 0,
-		},
+			rollupOptions: {
+			  external: ['virtual:astro:assets/fonts/internal']
+			}
+		  }
 	},
 	viewTransitions:true,
 });
