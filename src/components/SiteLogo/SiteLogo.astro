@@ -5,17 +5,17 @@ import { Image } from "astro:assets";
 import siteData from "@config/siteData.json";
 
 // images
-import logo from "@images/site-logo.png";
+import brillaprologo from "@images/brillaprologo-removebg.png";
 ---
 
 <a class="primary-focus flex items-center align-middle p-5" href="/" aria-label="Home" class="">
-	<!-- <Image
-    src={logo}
-    alt="Cosmic Themes logo"
+	<Image
+    src={brillaprologo}
+    alt="Brilla Pro Solutions Logo"
     loading="eager"
     width={100}
     height={100}
     class="h-14 w-14"
-  /> -->
+  /> 
 	<div class="font-heading-1 text-xl uppercase">{siteData.name}</div>
 </a>
