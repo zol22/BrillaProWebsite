@@ -41,7 +41,7 @@
 		font-family: var(--font-heading-1);
 	}
 	h2 {
-		@apply text-2xl leading-tight tracking-wide uppercase md:text-[2.5rem] md:leading-tight;
+		@apply text-2xl leading-tight tracking-wide uppercase lg:text-3xl md:leading-tight;
 		font-family: var(--font-heading-1);
 	}
 	h3 {
