@@ -3,6 +3,7 @@
 // component import
 import BaseHead from "@layouts/BaseHead.astro";
 import Nav from "@components/Nav/Nav.astro";
+const NavClient = Nav;
 import Footer from "@components/Footer/Footer.astro";
 
 // style import
@@ -47,7 +48,7 @@ const {
 	</head>
 	<body id="body" class="bg-base-50 text-base-900">
 		<div class="min-h-[100lvh]">
-			<Nav startStyle={navStartStyle} client:load />
+			<NavClient startStyle={navStartStyle} />
 			<main>
 				<slot />
 			</main>
