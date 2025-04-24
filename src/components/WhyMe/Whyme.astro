@@ -10,14 +10,15 @@ import Button from "@components/Button/Button.astro";
         <p class="mb-5 col">At BrillaPro Solutions, we don’t just clean — we care. Whether it’s your car, carpet, or curbside, we treat every job like it’s our own. We show up on time, work with pride, and leave your space shining.
         </p>
         <h3 class="my-4 col">What Makes Us Different?</h3>
-        <ul class="col">
-            <li><i class="bx bx-cool mr-2 text-lg"></i>Locally Owned, Personally Invested </li>
-            <li><i class="bx bx-cool mr-2 text-lg"></i>Premium Quality, Fair Pricing</li>
-            <li><i class="bx bx-cool mr-2 text-lg"></i>Respectful & Reliable </li>
-            <li><i class="bx bx-cool mr-2 text-lg"></i>Passion for Detail</li>
-            <li><i class="bx bx-cool mr-2 text-lg"></i>Full-Service Options  </li>
-
-        </ul>
+        <Fragment client:load>
+            <ul class="col">
+              <li><box-icon name="cool" color="white" size="sm" class="mr-2 align-middle"></box-icon> Locally Owned, Personally Invested</li>
+              <li><box-icon name="cool" color="white" size="sm" class="mr-2 align-middle"></box-icon> Premium Quality, Fair Pricing</li>
+              <li><box-icon name="cool" color="white" size="sm" class="mr-2 align-middle"></box-icon> Respectful & Reliable</li>
+              <li><box-icon name="cool" color="white" size="sm" class="mr-2 align-middle"></box-icon> Passion for Detail</li>
+              <li><box-icon name="cool" color="white" size="sm" class="mr-2 align-middle"></box-icon> Full-Service Options</li>
+            </ul>
+          </Fragment>
         <Button href="#contact" variant="secondary" class="w-fit mt-5 col"> Get a Free Quote</Button>
 
     </div>

@@ -19,8 +19,8 @@ const {title, description, CTA } = Astro.props;
     src={heroPage}
     alt="Car detailing background"
     class="absolute inset-0 w-full h-full object-cover z-0"
-    loading="lazy"
-  />
+    fetchpriority="high"
+    loading="eager"  />
 
   <!-- Overlay (optional dark filter for readability) -->
   <div class="absolute inset-0 bg-black/50 z-10"></div>
