@@ -94,7 +94,7 @@ const { startStyle = "default", rest } = Astro.props as Props;
 	document.addEventListener("astro:after-swap", initNav);
 </script>
 
-<style>
+<style is:inline>
 	#nav__container.initial {
 		/* @apply text-white; */
 		color: black

@@ -34,7 +34,7 @@ const { navItem, class: className } = Astro.props as Props;
 	</div>
 </li>
 
-<style>
+<style is:inline>
 	.dropdown {
 		/* when dropdown is hovered over (mouse) or focused (keyboard tabbing), open it with animation */
 		&:hover > .dropdown-content,
