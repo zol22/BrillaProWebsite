@@ -37,7 +37,7 @@
 		@apply cursor-pointer;
 	}
 	h1 {
-		@apply text-4xl lg:text-5xl;
+		@apply text-3xl lg:text-4xl;
 		font-family: var(--font-heading-1);
 	}
 	h2 {
