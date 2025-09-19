@@ -5,6 +5,9 @@ import cd6 from "@assets/gallery/detailing/cd6.jpg"
 import cd5 from "@assets/gallery/detailing/cd5.png"
 import cd8 from "@assets/gallery/detailing/cd8.png"
 
+import cd9 from "@assets/gallery/detailing/cd9.png"
+import cd10 from "@assets/gallery/detailing/cd10.png"
+
 
 
 export const gallery = [
@@ -44,6 +47,22 @@ export const gallery = [
       title: "Car Detailing",
       type: "image",
       image: cd8,      
+      alt: "Shiny white SUV after car detailing, reflecting trees and sky in Orlando",
+      slug:"clean-tire-detail"
+
+    },
+    {
+      title: "Car Detailing",
+      type: "image",
+      image: cd9,      
+      alt: "Shiny white SUV after car detailing, reflecting trees and sky in Orlando",
+      slug:"clean-tire-detail"
+
+    },
+    {
+      title: "Car Detailing",
+      type: "image",
+      image: cd10,      
       alt: "Shiny white SUV after car detailing, reflecting trees and sky in Orlando",
       slug:"clean-tire-detail"
 
